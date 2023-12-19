@@ -2,23 +2,29 @@
 
 ## Job Control Language (JCL) 
 
-- **[ALLOSEQ.jcl](jcl/ALLOSEQ.jcl)**. Demonstrates using IEFBR14 with DD statements to allocate and catalog physical sequential data sets (PS). 
+### Sequential Data Sets and the DD Statement
 
-- **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Demonstrates using IEFBR14 with DD statements to uncatalog and unallocate physical sequential data sets (PS). 
+- **[HELLO.jcl](jcl/HELLO.jcl)**. First runnable job - Hello, World!
 
-- **[CPDELETE.jcl](jcl/CPDELETE.jcl)**. Demonstrates using DD parameters to effect a "move" of a sequential data set using EIBGENER.
+- **[ALLOSEQ.jcl](jcl/ALLOSEQ.jcl)**. Use DD statements with IEFBR14 to allocate and catalog physical sequential data sets (PS). 
 
-- **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Demonstrates using EIBGENER to edit/transform input data into output data.
+- **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Use DD statements with IEFBR14 to uncatalog and unallocate physical sequential data sets (PS). 
 
-- **[CPMODEL.jcl](jcl/CPMODEL.jcl)**. Demonstrates using a model DSCB on the DD statement for a new data set.
+### Copying Sequential Data Sets with IEBGENER
 
-- **[CPREFDD.jcl](jcl/CPREFDD.jcl)**. Demonstrates using the REFDD DD parameter to re-use DCB information from an existing data set declared in the same job.
+- **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Copy in-line data to SYSOUT.
 
-- **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Demonstrates using EIBGENER to copy in-line data in SYSUT1 to SYSOUT.
+- **[CPTONEW.jcl](jcl/CPTONEW.jcl)**. Create a new sequential data set and copy in-line data to it.
 
-- **[CPTONEW.jcl](jcl/CPTONEW.jcl)**. Demonstrates using EIBGENER to copy in-line data in SYSUT1 to a new data set in SYSUT2.
+- **[CPREFDD.jcl](jcl/CPREFDD.jcl)**. Specify the REFDD parameter on the SYSUT2 DD statement to re-use DCB information from an existing data set declared in the same job.
 
-- **[DEFMODEL.jcl](jcl/DEFMODEL.jcl)**. Demonstrates using IEFBR14 to catalog a model DSCB.
+- **[DEFMODEL.jcl](jcl/DEFMODEL.jcl)**. Catalog a model DSCB.
+
+- **[CPMODEL.jcl](jcl/CPMODEL.jcl)**. Specify a model DSCB on the SYSUT2 DD statement for a new data set.
+
+- **[CPDELETE.jcl](jcl/CPDELETE.jcl)**. Use DD parameters to effect a "move" or "rename" of a sequential data set using EIBGENER.
+
+- **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Use EIBGENER to edit/transform input data.
 
 ## COBOL 
 
