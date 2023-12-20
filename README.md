@@ -10,7 +10,7 @@
 
 - **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Use DD statements with IEFBR14 to uncatalog and unallocate physical sequential data sets (PS). 
 
-### Copying Sequential Data Sets with IEBGENER
+### Copying Sequential Data Sets with EIBGENER
 
 - **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Copy in-line data to SYSOUT.
 
