@@ -26,6 +26,22 @@
 
 - **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Use EIBGENER to edit/transform input data.
 
+### Sorting and Merging Data Sets with DFSORT
+
+- **[SORT1.jcl](jcl/SORT1.jcl)**. Sort a data set on a single field.
+
+- **[SORT2.jcl](jcl/SORT2.jcl)**. Sort a data set on multiple fields.
+
+- **[SORT3.jcl](jcl/SORT3.jcl)**. Include selected records for sorting.
+
+- **[SORT4.jcl](jcl/SORT4.jcl)**. Reformat output records.
+
+- **[SORT5.jcl](jcl/SORT5.jcl)**. Use symbols with DFSORT.
+
+- **[SORT6.jcl](jcl/SORT6.jcl)**. Merge three data sets.
+
+- **[SORT7.jcl](jcl/SORT7.jcl)**. Sort three data sets concatenated as one.
+
 ## COBOL 
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
