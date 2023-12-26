@@ -52,6 +52,20 @@
 
 - **[SORTIT.jcl](procs/SORTIT.jcl)**. Catalogued procedure to do a sort.
 
+### Conditional Step Execution 
+
+- **[COND_1.jcl](jcl/COND_1.jcl)**. Sample JCL using COND=EVEN.
+
+- **[COND_ONLY_1.jcl](jcl/COND_ONLY_1.jcl)**. Sample JCL using COND=ONLY, first step does not fail.
+
+- **[COND_ONLY_2.jcl](jcl/COND_ONLY_2.jcl)**. Sample JCL using COND=ONLY, first step fails.
+
+- **[COND_STEP_REF.jcl](jcl/COND_STEP_REF.jcl)**. Sample JCL using COND referring to the condition code from a particular step.
+
+- **[COND_MULTIPLE.jcl](jcl/COND_MULTIPLE.jcl)**. Sample JCL using COND with multiple conditions specified.
+
+- **[IFELSE_MULTIPLE.jcl](jcl/IFELSE_MULTIPLE.jcl)**. Sample JCL using IF/ELSE with multiple conditions specified.
+
 ## COBOL 
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
