@@ -42,6 +42,16 @@
 
 - **[SORT7.jcl](jcl/SORT7.jcl)**. Sort three data sets concatenated as one.
 
+### Defining and Using JCL Procedures, temporary data sets 
+
+- **[SORT8.jcl](jcl/SORT8.jcl)**. Define an in-line JCL procedure.
+
+- **[SORT9.jcl](jcl/SORT9.jcl)**. Create and pass temporary data sets.
+
+- **[SORT10.jcl](jcl/SORT10.jcl)**. Define a catalogued JCL procedure.
+
+- **[SORTIT.jcl](procs/SORTIT.jcl)**. Catalogued procedure to do a sort.
+
 ## COBOL 
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
