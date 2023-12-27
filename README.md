@@ -10,7 +10,7 @@
 
 - **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Use DD statements with IEFBR14 to uncatalog and unallocate physical sequential data sets (PS). 
 
-### Copying Sequential Data Sets with EIBGENER
+### Copying Sequential Data Sets with IEBGENER
 
 - **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Copy in-line data to SYSOUT.
 
@@ -25,6 +25,14 @@
 - **[CPDELETE.jcl](jcl/CPDELETE.jcl)**. Use DD parameters to effect a "move" or "rename" of a sequential data set using EIBGENER.
 
 - **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Use EIBGENER to edit/transform input data.
+
+
+### Copying Partitioned Data Sets with EIBCOPY
+
+- **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Create PDSE with IEFBR14.
+
+- **[COPYPDSE.jcl](jcl/COPYPDSE.jcl)**. Create and load PDSE with IEBCOPY.
+
 
 ### Sorting and Merging Data Sets with DFSORT
 
