@@ -26,12 +26,22 @@
 
 - **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Use EIBGENER to edit/transform input data.
 
-
 ### Copying Partitioned Data Sets with EIBCOPY
 
 - **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Create PDSE with IEFBR14.
 
 - **[COPYPDSE.jcl](jcl/COPYPDSE.jcl)**. Create and load PDSE with IEBCOPY.
+
+### Working with Generation Data Groups (GDGs)
+
+- **[CREGDG.jcl](jcl/CREGDG.jcl)**. Create a GDG using IDCAMS and a model DSCB using IEFBR14.
+
+- **[GDGLD1.jcl](jcl/GDGLD1.jcl)**. Create and load a Generation Data Set (GDS).
+
+- **[GDGLD2.jcl](jcl/GDGLD2.jcl)**. Create and load another GDS.
+
+- **[LISTGDG.jcl](jcl/LISTGDG.jcl)**. List individual and concatenated GDSs using IEBGENER.
+
 
 
 ### Sorting and Merging Data Sets with DFSORT
