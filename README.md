@@ -42,8 +42,6 @@
 
 - **[LISTGDG.jcl](jcl/LISTGDG.jcl)**. List individual and concatenated GDSs using IEBGENER.
 
-
-
 ### Sorting and Merging Data Sets with DFSORT
 
 - **[SORT1.jcl](jcl/SORT1.jcl)**. Sort a data set on a single field.
@@ -83,6 +81,24 @@
 - **[COND_MULTIPLE.jcl](jcl/COND_MULTIPLE.jcl)**. Sample JCL using COND with multiple conditions specified.
 
 - **[IFELSE_MULTIPLE.jcl](jcl/IFELSE_MULTIPLE.jcl)**. Sample JCL using IF/ELSE with multiple conditions specified.
+
+### Defining VSAM objects with IDCAMS
+
+- **[CREAIX.jcl](jcl/CREAIX.jcl)**. Delete and define an Alternate Index and Path and build the index using IDCAMS.
+
+- **[LOADKSDS.jcl](jcl/CREAIX.jcl)**. Ensure newly-defined KSDS is not empty before attempting BLDINDEX. Demonstrates the IDCAMS REPRO command.
+
+- **[CREESDS.jcl](jcl/CREESDS.jcl)**. Delete and define an Entry-Sequenced Data Set (ESDS) using IDCAMS.
+
+- **[CREKSDS1.jcl](jcl/CREKSDS1.jcl)**. Delete and define a Key-Sequenced Data Set (KSDS) using IDCAMS.
+
+- **[CREKSDS2.jcl](jcl/CREKSDS2.jcl)**. Delete and define a Key-Sequenced Data Set (KSDS) using IEFBR14 and a DD statement.
+
+- **[CRELDS.jcl](jcl/CRELDS.jcl)**. Delete and define a Linear Data Set (LDS) using IDCAMS.
+
+- **[CRERRDS.jcl](jcl/CRERRDS.jcl)**. Delete and define a Relative Record Data Set (RRDS) using IDCAMS.
+
+
 
 ## COBOL 
 
