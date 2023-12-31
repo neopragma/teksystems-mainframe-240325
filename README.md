@@ -98,6 +98,9 @@
 
 - **[CRERRDS.jcl](jcl/CRERRDS.jcl)**. Delete and define a Relative Record Data Set (RRDS) using IDCAMS.
 
+### Job Restart 
+
+- **[RESTART.jcl](jcl/RESTART.jcl)**. Sample JCL demonstrating the RESTART parameter of the JOB statement.
 
 
 ## COBOL 
