@@ -10,6 +10,12 @@
 
 - **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Use DD statements with IEFBR14 to uncatalog and unallocate physical sequential data sets (PS). 
 
+### Partitioned Data Sets
+
+- **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Allocate a PDSE to be used as a source library.
+
+- **[ALLOLIB.jcl](jcl/ALLOPDSE.jcl)**. Allocate a PDSE to be used as a Program Library.
+
 ### Copying Sequential Data Sets with IEBGENER
 
 - **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Copy in-line data to SYSOUT.
