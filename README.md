@@ -14,7 +14,7 @@
 
 - **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Allocate a PDSE to be used as a source library.
 
-- **[ALLOLIB.jcl](jcl/ALLOPDSE.jcl)**. Allocate a PDSE to be used as a Program Library.
+- **[ALLOLIB.jcl](jcl/ALLOLIB.jcl)**. Allocate a PDSE to be used as a Program Library.
 
 ### Copying Sequential Data Sets with IEBGENER
 
