@@ -113,6 +113,8 @@
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
 
+- **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
+
 ## Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
