@@ -117,6 +117,8 @@
 
 - **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
 
+- **[STRING5.cbl](cobol/STRING5.cbl)**. A sample program that demonstrates several COBOL features, including group and elementary Data Division entries, REDEFINES, RENAMES, MOVE CORRESPONDING, Reference Modification, IF/ELSE, and EVALUATE.
+
 ## Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
