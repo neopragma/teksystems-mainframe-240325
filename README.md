@@ -111,6 +111,8 @@
 
 ## COBOL 
 
+- **[BSKEL1.cbl](cobol/BSKEL.cbl)**. Batch COBOL skeleton program. Sequential in, sequential out.
+
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
 
 - **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
