@@ -119,6 +119,10 @@
 
 - **[STRING5.cbl](cobol/STRING5.cbl)**. A sample program that demonstrates several COBOL features, including group and elementary Data Division entries, REDEFINES, RENAMES, MOVE CORRESPONDING, Reference Modification, IF/ELSE, and EVALUATE.
 
+- **[STRING6.cbl](cobol/STRING6.cbl)**. A sample program that demonstrates using combinations of STRING, UNSTRING, INSPECT, and intrinsic functions to manipulate text.
+
+- **[UNSTRING.cbl](cobol/UNSTRING.cbl)**. A sample program that demonstrates all the options of the UNSTRING statement.
+
 ## Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
