@@ -123,6 +123,12 @@
 
 - **[UNSTRING.cbl](cobol/UNSTRING.cbl)**. A sample program that demonstrates all the options of the UNSTRING statement.
 
+- **[NUMBERS1.cbl](cobol/NUMBERS1.cbl)**. A sample program that demonstrates numeric data formats and the ADD, SUBTRACT, MULTIPLY, DIVIDE, and COMPUTE statements as well as several intrinsic functions applicable to arithmetic.
+
+- **[DATES.cbl](cobol/DATES.cbl)**. A sample program that demonstrates date and time handling.
+
+- **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
+
 ## Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
