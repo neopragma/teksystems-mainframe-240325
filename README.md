@@ -129,6 +129,8 @@
 
 - **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
 
+- **[TABLES.cbl](cobol/TABLES.cbl)**. A sample program that demonstrates basic table definition and manipulation.
+
 ## Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
