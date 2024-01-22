@@ -111,7 +111,9 @@
 
 ## COBOL 
 
-- **[BSKEL1.cbl](cobol/BSKEL.cbl)**. Batch COBOL skeleton program. Sequential in, sequential out.
+- **[BSKEL1.cbl](cobol/BSKEL1.cbl)**. Batch COBOL skeleton program. Sequential in, sequential out.
+
+- **[ESDS1.cbl](cobol/ESDS.cbl)**. Sample batch COBOL program to process VSAM ESDS files.
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
 
