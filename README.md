@@ -115,6 +115,8 @@
 
 - **[ESDS1.cbl](cobol/ESDS1.cbl)**. Sample batch COBOL program to process VSAM ESDS files.
 
+- **[KSDS1.cbl](cobol/KSDS1.cbl)**. Sample batch COBOL program to process VSAM KSDS files.
+
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
 
 - **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
