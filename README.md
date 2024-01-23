@@ -104,6 +104,22 @@
 
 - **[CRERRDS.jcl](jcl/CRERRDS.jcl)**. Delete and define a Relative Record Data Set (RRDS) using IDCAMS.
 
+### JCL for COBOL Examples
+
+- **[CREESFL.jcl](jcl/CREESFL.jcl)**. Delete, define, and load an Entry Sequenced Data Set (ESDS) for the COBOL sample program ESDS1.cbl.
+
+- **[CREKSFL.jcl](jcl/CREKSFL.jcl)**. Delete, define, and load a Key Sequenced Data Set (KSDS) for the COBOL sample program KSDS1.cbl.
+
+- **[CRERRFL.jcl](jcl/CRERRFL.jcl)**. Delete, define, and load a Relative Record Data Set (RRDS) for the COBOL sample program RRDS1.cbl.
+
+- **[ESDS1.jcl](jcl/ESDS1.jcl)**. Run the COBOL sample program ESDS1.cbl.
+
+- **[KSDS1.jcl](jcl/KSDS1.jcl)**. Run the COBOL sample program KSDS1.cbl.
+
+- **[RRDS1.jcl](jcl/RRDS1.jcl)**. Run the COBOL sample program RRDS1.cbl.
+
+
+
 ### Job Restart 
 
 - **[RESTART.jcl](jcl/RESTART.jcl)**. Sample JCL demonstrating the RESTART parameter of the JOB statement.
@@ -111,15 +127,23 @@
 
 ## COBOL 
 
+### COBOL General Examples
+
+- **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
+
+- **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
+
 - **[BSKEL1.cbl](cobol/BSKEL1.cbl)**. Batch COBOL skeleton program. Sequential in, sequential out.
+
+### COBOL VSAM Processing - Batch
 
 - **[ESDS1.cbl](cobol/ESDS1.cbl)**. Sample batch COBOL program to process VSAM ESDS files.
 
 - **[KSDS1.cbl](cobol/KSDS1.cbl)**. Sample batch COBOL program to process VSAM KSDS files.
 
-- **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
+- **[RRDS1.cbl](cobol/RRDS1.cbl)**. Sample batch COBOL program to process VSAM RRDS files.
 
-- **[NOTHING.cbl](cobol/NOTHING.cbl)**. The minimum program in COBOL.
+### COBOL Strings and Text
 
 - **[STRING5.cbl](cobol/STRING5.cbl)**. A sample program that demonstrates several COBOL features, including group and elementary Data Division entries, REDEFINES, RENAMES, MOVE CORRESPONDING, Reference Modification, IF/ELSE, and EVALUATE.
 
@@ -127,11 +151,15 @@
 
 - **[UNSTRING.cbl](cobol/UNSTRING.cbl)**. A sample program that demonstrates all the options of the UNSTRING statement.
 
+### COBOL Numeric Data Formats, Arithmetic, Dates
+
 - **[NUMBERS1.cbl](cobol/NUMBERS1.cbl)**. A sample program that demonstrates numeric data formats and the ADD, SUBTRACT, MULTIPLY, DIVIDE, and COMPUTE statements as well as several intrinsic functions applicable to arithmetic.
 
 - **[DATES.cbl](cobol/DATES.cbl)**. A sample program that demonstrates date and time handling.
 
 - **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
+
+### COBOL Tables
 
 - **[TABLES.cbl](cobol/TABLES.cbl)**. A sample program that demonstrates basic table definition and manipulation.
 
