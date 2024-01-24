@@ -85,7 +85,7 @@
            delete RRDS-File record
            if RRDS-OK
                display "Got normal status on DELETE"
-               display "    with RRN " RRN-1
+               display "    with RRN " RRN
            else
                string Const-Got-Status delimited by size
                       RRDS-File-Status delimited by size
@@ -100,7 +100,7 @@
            perform 1100-Read-by-RRN
            perform 9000-Close
 
-      * Write (insert) a record 
+      * Write (append) a record 
            
            open extend RRDS-File-Seq
            move zero to RRN

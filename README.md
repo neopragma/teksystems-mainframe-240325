@@ -104,7 +104,13 @@
 
 - **[CRERRDS.jcl](jcl/CRERRDS.jcl)**. Delete and define a Relative Record Data Set (RRDS) using IDCAMS.
 
+### Job Restart 
+
+- **[RESTART.jcl](jcl/RESTART.jcl)**. Sample JCL demonstrating the RESTART parameter of the JOB statement.
+
 ### JCL for COBOL Examples
+
+- **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
 
 - **[CREESFL.jcl](jcl/CREESFL.jcl)**. Delete, define, and load an Entry Sequenced Data Set (ESDS) for the COBOL sample program ESDS1.cbl.
 
@@ -117,12 +123,6 @@
 - **[KSDS1.jcl](jcl/KSDS1.jcl)**. Run the COBOL sample program KSDS1.cbl.
 
 - **[RRDS1.jcl](jcl/RRDS1.jcl)**. Run the COBOL sample program RRDS1.cbl.
-
-
-
-### Job Restart 
-
-- **[RESTART.jcl](jcl/RESTART.jcl)**. Sample JCL demonstrating the RESTART parameter of the JOB statement.
 
 
 ## COBOL 
@@ -157,11 +157,24 @@
 
 - **[DATES.cbl](cobol/DATES.cbl)**. A sample program that demonstrates date and time handling.
 
-- **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
-
 ### COBOL Tables
 
 - **[TABLES.cbl](cobol/TABLES.cbl)**. A sample program that demonstrates basic table definition and manipulation.
+
+### COBOL Subprograms and Nested Programs 
+
+- **[LEAP1.cbl](cobol/LEAP1.cbl)**. A sample program that demonstrates a static subprogram CALL that passes parameters BY REFERENCE.
+
+- **[LEAP2.cbl](cobol/LEAP2.cbl)**. A sample program that demonstrates a static subprogram CALL that passes parameters BY CONTENT.
+
+- **[LEAP3.cbl](cobol/LEAP3.cbl)**. A sample program that demonstrates a dynamic subprogram CALL.
+
+- **[ISLEAP1.cbl](cobol/LEAP1.cbl)**. A sample subprogram that expects parameters to be passed BY REFERENCE.
+
+- **[ISLEAP2.cbl](cobol/LEAP2.cbl)**. A sample subprogram that expects parameters to be passed BY CONTENT.
+
+- **[ISLEAP3.cbl](cobol/LEAP2.cbl)**. A sample subprogram that expects parameters to be passed BY CONTENT, with a different implementation of the logic, to help demonstrate dynamic subprogram calls.
+
 
 ## Assembler 
 
