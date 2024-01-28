@@ -1,8 +1,16 @@
-# z/OS Training - Sample Code 
+# z/OS Training
 
-## Job Control Language (JCL) 
+## Labs
 
-### Sequential Data Sets and the DD Statement
+### [JCL Labs](labs/JCL_Labs.md)
+
+### [COBOL Labs](labs/COBOL_Labs.md)
+
+## Sample Code 
+
+### Job Control Language (JCL) 
+
+#### Sequential Data Sets and the DD Statement
 
 - **[HELLO.jcl](jcl/HELLO.jcl)**. First runnable job - Hello, World!
 
@@ -10,13 +18,13 @@
 
 - **[UNALSEQ.jcl](jcl/UNALSEQ.jcl)**. Use DD statements with IEFBR14 to uncatalog and unallocate physical sequential data sets (PS). 
 
-### Partitioned Data Sets
+#### Partitioned Data Sets
 
 - **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Allocate a PDSE to be used as a source library.
 
 - **[ALLOLIB.jcl](jcl/ALLOLIB.jcl)**. Allocate a PDSE to be used as a Program Library.
 
-### Copying Sequential Data Sets with IEBGENER
+#### Copying Sequential Data Sets with IEBGENER
 
 - **[CPSYSOUT.jcl](jcl/CPSYSOUT.jcl)**. Copy in-line data to SYSOUT.
 
@@ -32,13 +40,13 @@
 
 - **[CPEDIT.jcl](jcl/CPEDIT.jcl)**. Use EIBGENER to edit/transform input data.
 
-### Copying Partitioned Data Sets with EIBCOPY
+#### Copying Partitioned Data Sets with EIBCOPY
 
 - **[ALLOPDSE.jcl](jcl/ALLOPDSE.jcl)**. Create PDSE with IEFBR14.
 
 - **[COPYPDSE.jcl](jcl/COPYPDSE.jcl)**. Create and load PDSE with IEBCOPY.
 
-### Working with Generation Data Groups (GDGs)
+#### Working with Generation Data Groups (GDGs)
 
 - **[CREGDG.jcl](jcl/CREGDG.jcl)**. Create a GDG using IDCAMS and a model DSCB using IEFBR14.
 
@@ -48,7 +56,7 @@
 
 - **[LISTGDG.jcl](jcl/LISTGDG.jcl)**. List individual and concatenated GDSs using IEBGENER.
 
-### Sorting and Merging Data Sets with DFSORT
+#### Sorting and Merging Data Sets with DFSORT
 
 - **[SORT1.jcl](jcl/SORT1.jcl)**. Sort a data set on a single field.
 
@@ -64,7 +72,7 @@
 
 - **[SORT7.jcl](jcl/SORT7.jcl)**. Sort three data sets concatenated as one.
 
-### Defining and Using JCL Procedures, temporary data sets 
+#### Defining and Using JCL Procedures, temporary data sets 
 
 - **[SORT8.jcl](jcl/SORT8.jcl)**. Define an in-line JCL procedure.
 
@@ -74,7 +82,7 @@
 
 - **[SORTIT.jcl](procs/SORTIT.jcl)**. Catalogued procedure to do a sort.
 
-### Conditional Step Execution 
+#### Conditional Step Execution 
 
 - **[COND_1.jcl](jcl/COND_1.jcl)**. Sample JCL using COND=EVEN.
 
@@ -88,7 +96,7 @@
 
 - **[IFELSE_MULTIPLE.jcl](jcl/IFELSE_MULTIPLE.jcl)**. Sample JCL using IF/ELSE with multiple conditions specified.
 
-### Defining VSAM objects with IDCAMS
+#### Defining VSAM objects with IDCAMS
 
 - **[CREAIX.jcl](jcl/CREAIX.jcl)**. Delete and define an Alternate Index and Path and build the index using IDCAMS.
 
@@ -104,11 +112,11 @@
 
 - **[CRERRDS.jcl](jcl/CRERRDS.jcl)**. Delete and define a Relative Record Data Set (RRDS) using IDCAMS.
 
-### Job Restart 
+#### Job Restart 
 
 - **[RESTART.jcl](jcl/RESTART.jcl)**. Sample JCL demonstrating the RESTART parameter of the JOB statement.
 
-### JCL for COBOL Examples
+#### JCL for COBOL Examples
 
 - **[DATES.jcl](jcl/DATES.jcl)**. JCL to run the DATES program, including a SYSIN data set needed for the ACCEPT statements in DATES.cbl.
 
@@ -125,9 +133,9 @@
 - **[RRDS1.jcl](jcl/RRDS1.jcl)**. Run the COBOL sample program RRDS1.cbl.
 
 
-## COBOL 
+### COBOL 
 
-### COBOL General Examples
+#### COBOL General Examples
 
 - **[HELLO.cbl](cobol/HELLO.cbl)**. The canonical "Hello, World!" program in COBOL.
 
@@ -135,7 +143,7 @@
 
 - **[BSKEL1.cbl](cobol/BSKEL1.cbl)**. Batch COBOL skeleton program. Sequential in, sequential out.
 
-### COBOL VSAM Processing - Batch
+#### COBOL VSAM Processing - Batch
 
 - **[ESDS1.cbl](cobol/ESDS1.cbl)**. Sample batch COBOL program to process VSAM ESDS files.
 
@@ -143,7 +151,7 @@
 
 - **[RRDS1.cbl](cobol/RRDS1.cbl)**. Sample batch COBOL program to process VSAM RRDS files.
 
-### COBOL Strings and Text
+#### COBOL Strings and Text
 
 - **[STRING5.cbl](cobol/STRING5.cbl)**. A sample program that demonstrates several COBOL features, including group and elementary Data Division entries, REDEFINES, RENAMES, MOVE CORRESPONDING, Reference Modification, IF/ELSE, and EVALUATE.
 
@@ -151,17 +159,17 @@
 
 - **[UNSTRING.cbl](cobol/UNSTRING.cbl)**. A sample program that demonstrates all the options of the UNSTRING statement.
 
-### COBOL Numeric Data Formats, Arithmetic, Dates
+#### COBOL Numeric Data Formats, Arithmetic, Dates
 
 - **[NUMBERS1.cbl](cobol/NUMBERS1.cbl)**. A sample program that demonstrates numeric data formats and the ADD, SUBTRACT, MULTIPLY, DIVIDE, and COMPUTE statements as well as several intrinsic functions applicable to arithmetic.
 
 - **[DATES.cbl](cobol/DATES.cbl)**. A sample program that demonstrates date and time handling.
 
-### COBOL Tables
+#### COBOL Tables
 
 - **[TABLES.cbl](cobol/TABLES.cbl)**. A sample program that demonstrates basic table definition and manipulation.
 
-### COBOL Subprograms and Nested Programs 
+#### COBOL Subprograms and Nested Programs 
 
 - **[LEAP1.cbl](cobol/LEAP1.cbl)**. A sample program that demonstrates a static subprogram CALL that passes parameters BY REFERENCE.
 
@@ -176,7 +184,7 @@
 - **[ISLEAP3.cbl](cobol/LEAP2.cbl)**. A sample subprogram that expects parameters to be passed BY CONTENT, with a different implementation of the logic, to help demonstrate dynamic subprogram calls.
 
 
-## Assembler 
+### Assembler 
 
 - **[BOOMER.asm](asm/BOOMER.asm)**. Program that abends, for testing JCL for conditional step execution. 
 
