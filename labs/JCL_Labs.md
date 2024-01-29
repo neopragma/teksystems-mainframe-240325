@@ -2,8 +2,6 @@
 
 # z/OS JCL Labs 
 
-## Day 3 
-
 ### JCL Lab 1 - Create sequential data set with IEFBR14 
 
 In the JCL library provided in the lab environment, create a job containing one step that executes utility IEFBR14. Code a DD statement for that step to allocate and catalog a sequential data set with the name ```shell <userid>.TEST.QSAM1```. 
@@ -82,7 +80,33 @@ From now on, use your JCL library instead of the default one that was provided.
 
 
 
-### JCL Lab 6 - Sort on two fields 
+### JCL Lab 6 - Use the model DSCB to create a COBOL source library
+
+The task is to write a job stream that creates a source library for COBOL code.
+
+Refer to the model DSCB you created in Lab 4 in the DCB parameter of the SYSUT2 DD statement to create another PDSE. Name this PDSE ```<userid>.INNOV.JCL```. Allocate space in tracks with 2 primary, 8 secondary, and 10 directory blocks. 
+
+Use SDSF to review the job output. 
+
+Use ISPF Option 3.4 to check the attributes of the new data set to be sure they are what you expected based on your DD parameters.
+
+From now on, use your COBOL source library for COBOL source code.
+
+
+
+### JCL Lab 7 - Create a program object library
+
+The task is to write a job stream that creates a program object library - that is, a PDSE as opposed to a PDS load library. Name it ```<userid>.INNOV.PGMLIB```.
+
+Use SDSF to review the job output. 
+
+Use ISPF Option 3.4 to check the attributes of the new data set to be sure they are what you expected based on your DD parameters.
+
+From now on, use your COBOL source library for COBOL source code.
+
+
+
+### JCL Lab 8 - Sort on two fields 
 
 Refer to material in _JCL Module 7 - Sort_ for information about DFSORT.
 
@@ -114,7 +138,7 @@ Catalog the output data set as ```<userid>.DATA.SRTOUT1```. Remember to pad the 
 
 
 
-### JCL Lab 7 - Multi-step sort, catalogued procedures, and conditional execution  
+### JCL Lab 9 - Multi-step sort, catalogued procedures, and conditional execution  
 
 Refer to material in _JCL Module 8 - PROC_ for information on temporary data sets and stored procedures and _JCL Module 9 - COMD_ for information on conditional step execution.
 
@@ -130,7 +154,7 @@ Catalog the output data set as ```<userid>.DATA.SRTOUT2```.
 
 
 
-### JCL Lab 8 - Create and load a GDG
+### JCL Lab 10 - Create and load a GDG
 
 Refer to material in _JCL Module 11 - GDG_ for information on Generation Data Groups (GDGs) and Generation Data Sets (GDSs). 
 
@@ -152,7 +176,7 @@ Use SDSF to see that the correct version was copied to SYSOUT.
 
 
 
-### JCL Lab 9 - Create and load a VSAM KSDS 
+### JCL Lab 11 - Create and load a VSAM KSDS 
 
 Refer to material in _JCL Module 12 - VSAM_ for information on using IDCAMS to manage VSAM data sets. 
 
@@ -163,16 +187,3 @@ Upload file ```labs/catalog_ksds.jcl``` as ```<userid>.INNOV.JCL(CATKSDS)```.
 Run the CATKSDS job to delete, define, listcat, load, and print a Key Sequenced Data Set (KSDS) named ```<userid>.INNOV.KSDS1```. There are intentional errors in the JCL and the IDCAMS commands that you will have to diagnose and correct before the job will run successfully. 
 
 Use SDSF and ISPF Option 3.2 to check the results. 
-
-
-
-
-
-
-
-
-
-
-
-
-
