@@ -99,11 +99,15 @@ Compile, bind, and run the program.
 Use SDSF to review the output.
 
 
-### COBOL Lab 8 - Searching Tables 
+### COBOL Lab 8 - Searching Tables, Processing Sequential Data Sets 
 
-Refer to material in _COBOL Module 9 - Tables_ for guidance. 
+Refer to material in _COBOL Module 9 - Tables_ and _COBOL Module 10 - Sequential Data Sets_ for guidance. 
 
 Upload program ```labs/TABSRCH.cbl``` as ```<userid>.COBOL.SOURCE(TABSRCH)```. 
+
+Upload copybook ```labs/TABREC.cbl``` as ```<userid>.COBOL.COPY(TABREC)```.
+
+Upload data file ```labs/mountains.txt``` as ```<userid>.INNOV.TABDATA``` with record format fixed-blocked, logical record length 80, block size 32000. Allocate one track primary, one track secondary. 	
 
 Follow the instructions in the source comments of TABSRCH to complete the missing code. 
 
@@ -125,4 +129,9 @@ Follow the instructions in the source comments of TABPLAY to complete the missin
 Compile, bind, and run the program.
 
 Use SDSF to review the output.
+
+
+### COBOL Lab 10 - VSAM KSDS 
+
+
 
