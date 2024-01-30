@@ -5,11 +5,20 @@
       *****************************************************************
        Environment Division.
        Input-Output Section.
+
+      * <your code goes here - SELECT>
+
        Data Division.
        File Section.
+
+      * <your code goes here - FD>
+
        Working-Storage Section.
        01  Input-Record.
            copy TABREC.
+
+      * <your code goes here - File Status field>
+
        Procedure Division.
 
       * Complete the missing code in the Environment Division,

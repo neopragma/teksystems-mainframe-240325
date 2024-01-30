@@ -131,7 +131,46 @@ Compile, bind, and run the program.
 Use SDSF to review the output.
 
 
-### COBOL Lab 10 - VSAM KSDS 
+### COBOL Lab 10 - VSAM KSDS batch update
 
+You'll write a batch application to keep track of free throw statistics for an amateur basketball league.
 
+There are several steps to complete in this lab: 
+1. Upload some data files
+1. Define and catalog a VSAM KSDS
+1. Load the KSDS from a sequential data set 
+1. Write a COBOL program to apply updates to the KSDS from a sequential input data set
+1. Write JCL to execute the COBOL program
 
+Details: 
+
+(1) Upload the following files:
+
+- Copybook for the Free Throw KSDS record layout: ```labs/FRTHROW.cpy``` ==> ```<userid>.COBOL.COPY(FRTHROW)``` 
+- Copybook for the Free Throw QSAM update record layout: ```labs/FRUPDATE.cpy``` ==> ```<userid>.COBOL.COPY(FRUPDATE)``` 
+- Seed data to load the KSDS: ```labs/FRSEED.data``` ==> ```<userid>.INNOV.FRSEED```, RECFM FB, LRECL 77, BLKSIZE 7700
+- Input updates for the batch job: ```labs/FRUPDATE.data``` ==> ```<userid>.INNOV.FRUPDATE```, RECFM FB, LRECL 80, BLKSIZE 16000
+
+(2) Use your mad IDCAMS skills to write a job that executes IDCAMS to:
+
+1. DELETE cluster ```<userid>.INNOV.FRTHROW``` 
+1. DEFINE cluster ```<userid>.INNOV.FRTHROW``` with record size 77 77, key 40 0.
+1. REPRO ```<userid>.INNOV.FRSEED``` into ```<userid>.INNOV.FRTHROW```.
+
+(3) Write a COBOL program to apply updates from ```<userid>.INNOV.FRUPDATE``` to ```<userid>.INNOV.FRTHROW```.
+
+Read the input file sequentially and apply the update specified in each record to the KSDS. Note that for a Delete operation, there are no data fields in the update record; only key fields.
+
+The record key comprises two logical fields (adjacent) - Team and Player.
+
+Check File Status values relevant to the I/O operations your program performs. 
+
+The input data may or may not be clean. Write defensive code to avoid S0C7 abends.
+
+(4) Write JCL to execute the COBOL program and apply the updates to the KSDS.
+
+Use the tools you have learned to check the results. For example, you can view batch job output with SDSF; you can run an IDCAMS PRINT job to see the contents of the KSDS, or use ISPF Option 3.4 to do so. 
+
+Based on the input values available in the update file, you can calculate the number of points scored by counting two (2) points for each completed free throw, minus the number of three-pointers, and then add the number of three-pointers times three (3). 
+
+(5) Have fun!
