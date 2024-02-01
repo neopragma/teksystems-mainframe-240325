@@ -12,8 +12,10 @@
 
 ### [COBOL samples](cobol/COBOL_Samples.md)
 
-### [Assembler samples](asm/Assembler_Samples.md)
-
 ### [CICS samples](cics/CICS_Samples.md)
 
-## [Capstone Projects](capstone/Capstone_Projects.md)
+### [Assembler samples](asm/Assembler_Samples.md)
+
+## Capstone Projects
+
+### [Mass Mailing](capstone/Mass_Mailing.md)
