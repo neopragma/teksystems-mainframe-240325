@@ -56,6 +56,9 @@ Key length and offset: 80   0
 
 Record layout:
 
+| Positions | Field | Description |
+| --- | --- | --- |
+
 | 1-40  | Email-Address | Email address (RID) |
 | 41-80 | Surname       | English: Last name, Spanish: Primer Apellido (RID) |
 
