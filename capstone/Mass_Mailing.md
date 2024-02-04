@@ -37,8 +37,8 @@ The project offers the opportunity to demonstrate the following skills:
 - Step restart after job failure, including handling Generation Data Sets correctly.
 - Writing batch COBOL programs that access either DB2 or a VSAM KSDS, as well as sequential data sets.
 - Writing COBOL logic to manipulate textual data and perform date arithmetic.
-- Designing and coding a BMS mapset.
-- Writing a COBOL program to access either DB2 or VSAM in the CICS environment.
+- Designing and coding a BMS mapset (full bootcamp only).
+- Writing a COBOL program to access either DB2 or VSAM in the CICS environment (full bootcamp only).
 
 #### System of Record 
 
@@ -46,9 +46,9 @@ The system of record for our solution contains Contact information.
 
 Depending on the topics included in your training program, this will be either a DB2 database containing one table or a single VSAM Key-Sequenced Data Set (not both).
 
-If you are taking the three-week curriculum, you can omit the CICS portion of the capstone solution.
+The data store for the system of record is _not_ provided. Creating it is part of the capstone exercise.
 
-**System of Record – VSAM KSDS**
+_System of Record – VSAM KSDS_
 
 Average and maximum record sizes: 219   219 
 
@@ -68,7 +68,7 @@ Record layout:
 | 211-218 |	Last-Response | YYYYMMDD |
 | 219-219 |	Do-Not-Contact | "X" or "P" or space |
 
-**System of Record - DB2**
+_System of Record - DB2_
 
 Table Name: **CONTACTS** 
 
@@ -84,4 +84,10 @@ Table Name: **CONTACTS**
 | LAST_CONTACT | DATE | null     | Date of latest mailout | 
 | LAST_RESPONSE | DATE | null | Date of latest response |
 | DO_NOT_CONTACT | CHARACTER(1) | null | "X" do not send, "P" pending request, or null |
+
+#### Batch Job #1 - Ingest Data Feeds 
+
+The first batch job will comprise several steps to read data feeds in different formats, reformat them into a common format, and sort them before updating the system of record with new and modified contact information. 
+
+[Fig. 1: Ingest data feeds (overview)](Mailout_Fig_1.png)
 
