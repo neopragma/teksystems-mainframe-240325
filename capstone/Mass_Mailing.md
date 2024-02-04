@@ -89,5 +89,5 @@ Table Name: **CONTACTS**
 
 The first batch job will comprise several steps to read data feeds in different formats, reformat them into a common format, and sort them before updating the system of record with new and modified contact information. 
 
-[Fig. 1: Ingest data feeds (overview)](Mailout_Fig_1.png)
+![Fig. 1: Ingest data feeds (overview)](Mailout_Fig_1.png)
 
