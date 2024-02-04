@@ -1,6 +1,6 @@
 # z/OS Training 
 
-## Capstone Projects 
+## [Capstone Projects](Capstone_Projects.md) 
 
 ### 1. Mass-Mailing Solution 
 
