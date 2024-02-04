@@ -91,7 +91,7 @@ The first batch job will comprise several steps to read data feeds in different 
 
 ![Fig. 1: Ingest data feeds (overview)](Mailout_Fig_1.png)
 
-The first three steps of the job must read the three data feeds and sort them. 
+The first few steps of the job must read the three data feeds and sort them. 
 
 ![Fig. 2: Read and sort 3 data feeds](Mailout_Fig_2.png)
 
@@ -99,9 +99,11 @@ _Data Feed #1_
 
 Data set type: PS (sequential)
 
+Record format: Fixed, blocked 
+
 Logical record length: 133 
 
-Record format: Fixed, blocked 
+Block size: Your choice
 
 Record layout:
 
@@ -117,6 +119,99 @@ Record layout:
 | 133 - 133 | Do Not Contact requested - any non-blank value | 
 
   This format contains no language indicator. Normalization logic must guess based on the number of tokens in the Name field 
+
+_Data Feed #2_ 
+
+Data set type: PS (sequential)
+
+Record format: Fixed, blocked 
+
+Logical record length: 153 
+
+Block size: Your choice
+
+Record layout:
+
+| Positions | Contents |
+| ---       | ---      |
+| 1 - 40    | Email address - could be invalid |
+| 41 - 70   | Last name or primer apellido |
+| 71 -100   | First name or primer nombre |
+| 101 -130  | Middle name or segundo nombre or blank |
+| 131 - 150 | "Jr." or segundo apellido or blank |
+| 151 - 152 | Do Not Contact - "N" or blank |
+| 153 - 154 | Language code - "EN", "ES", or an erroneous value. If blank assume "EN". |
+
+_Data Feed #3_
+
+Data set type: PS (sequential)
+
+Record format: Fixed, blocked 
+
+Logical record length: 151 
+
+Block size: Your choice
+
+Record layout:
+
+| Positions | Contents |
+| ---       | ---      |
+| 1 - 40    | Last name or primer apellido |
+| 41 - 80   | First name or primer nombre |
+| 81 - 120  | Middle name or segundo nombre or "STOP" in positions 81 - 84. "STOP" is a request not to contact. In that case, middle name or segundo nombre is not provided. |
+| 121 - 150 | Email address - could be invalid |
+| 151 - 151 | Language code - "1" = English, "2" = Spanish. Could be invalid. Blank is an error. |
+
+_Common Input Format (Result of reformatting)_
+
+Data set type: PS (sequential)
+
+Record format: Fixed, blocked 
+
+Logical record length: 143 
+
+Block size: Your choice
+
+Record layout:
+
+| Positions | Contents |
+| ---       | ---      |
+| 1 - 100   | Name as a single field with name elements in the same order as in Data Feed format #1, separated by one or more spaces. Name elements that contain embedded spaces are encloded in quotation marks. |
+| 101 - 102 | Language code - "EN" = English, "ES" - Spanish, blank = undetermined |
+| 103 - 142 | Email address |
+| 143 - 143 | Do Not Contact requested - "R". Otherwise blank |
+
+
+
+![Fig. 3: Rationalize names and guess the language if it is undetermined](Mailout_Fig_3.png)
+
+Write a COBOL program to clean up the input data and write good records to a Generation Data Set. Write "bad" records to an error file.
+
+For records with blanks in the language code field, guess the language based on the number of tokens in the name field. If there are four tokens, assume Spanish. Otherwise, assume English.
+
+
+![Fig. 4: Apply updates to the system of record data store](Mailout_Fig_4.png)
+
+Update either the VSAM KSDS or DB2 CONTACTS table based on the sorted, merged, and rationalized input data. 
+
+Records that match on both email address and surname are deemed to be duplicates.
+
+Our policy regarding "do not contact" indicators:
+
+We do not set "do not contact" when we first receive a contact through our external suppliers. 
+If the inbound record matches an existing contact in our system of record, then we check the "do not contact" request field in the input record. Our policy is not to set the "do not contact" indicator until the contact requests it twice. First time, we set it to "P"; second time, to "X".
+
+| Input: DNC Requested | System of Record Current Value | System of Record New Value |
+| ---                  | ---                            | ---                        |
+| :R:                  | :X:                            | :no change:                |
+| :R:                  | :P:                            | :X:                        |
+| :R:                  | :not set:                      | :P:                        |
+| :blank:              | :any:                          | :no change:                |
+
+
+
+
+
 
 
 
