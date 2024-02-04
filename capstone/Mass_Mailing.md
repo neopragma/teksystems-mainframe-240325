@@ -58,14 +58,30 @@ Record layout:
 
 | Positions | Field | Description |
 | --- | --- | --- |
-
 | 1-40  | Email-Address | Email address (RID) |
 | 41-80 | Surname       | English: Last name, Spanish: Primer Apellido (RID) |
+| 81-120 | First-Name  | English: First name, Spanish: Primer Nombre |
+| 121-160 | Middle-Name | English: Middle name, Spanish: Segundo Nombre |
+| 161-200 |	Additional-Name | English: spaces, Spanish: Segundo Apellido |
+| 201-202 |	Language | EN or ES | 
+| 203-210 |	Last-Contact | YYYYMMDD |
+| 211-218 |	Last-Response | YYYYMMDD |
+| 219-219 |	Do-Not-Contact | "X" or "P" or space |
 
- 81-120 	First-Name       		English: First name, Spanish: Primer Nombre
-121-160 	Middle-Name      	English: Middle name, Spanish: Segundo Nombre
-161-200 	Additional-Name  	English: spaces, Spanish: Segundo Apellido
-201-202 	Language         		EN or ES 
-203-210 	Last-Contact     		YYYYMMDD
-211-218 	Last-Response    	YYYYMMDD
-219-219 	Do-Not-Contact   	"X" or "P" or space
+**System of Record - DB2**
+
+Table Name: **CONTACTS** 
+
+| Column    | Type        | Notes       | Description |
+| ---       | ---         | ---         | --- |
+| ID        |             | primary key | System generated |
+| LANG      | CHARACTER(2)| not null    | "EN" or "ES" |
+| SURNAME   | VARCHAR(30) | not null    | English: Last Name, Spanish: Primer Apellido |
+| FIRST_NAME | VARCHAR(30) | not null   | English: First Name, Spanish: Primer Nombre |
+| MIDDLE_NAME | VARCHAR(30) | null      | English: Middle Name, Spanish: Segundo Nombre |
+| ADDL_NAME | VARCHAR(30) | null        | English: N/A, Spanish: Segundo Apellido |
+| EMAIL_ADDR | VARCHAR(40) | not null   | Email address |
+| LAST_CONTACT | DATE | null     | Date of latest mailout | 
+| LAST_RESPONSE | DATE | null | Date of latest response |
+| DO_NOT_CONTACT | CHARACTER(1) | null | "X" do not send, "P" pending request, or null |
+
