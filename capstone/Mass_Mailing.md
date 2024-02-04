@@ -107,14 +107,14 @@ Record layout:
 
 | Positions | Contents |
 | ---       | ---      |
-| 1 - 100   | Name - comma-delimited list of tokens. May contain:
-              first-name, last-name
-              first-name, middle-name, last-name
-              primer-nombre, segundo-nombre, primer-apellido, segundo-apellido 
-              if blank, it's an error 
-              if it contains fewer than 2 tokens or more than 4 tokens, it's an error |
-  | 101 - 132 | Email Address - could be invalid |
-  | 133 - 133 | Do Not Contact requested - any non-blank value | 
+| 1 - 100   | Name - comma-delimited list of tokens. May contain: |
+| |              first-name, last-name |
+| |              first-name, middle-name, last-name |
+| |              primer-nombre, segundo-nombre, primer-apellido, segundo-apellido | 
+| |              if blank, it's an error | 
+| |              if it contains fewer than 2 tokens or more than 4 tokens, it's an error |
+| 101 - 132 | Email Address - could be invalid |
+| 133 - 133 | Do Not Contact requested - any non-blank value | 
 
   This format contains no language indicator. Normalization logic must guess based on the number of tokens in the Name field 
 
