@@ -203,10 +203,30 @@ If the inbound record matches an existing contact in our system of record, then 
 
 | Input: DNC Requested | System of Record Current Value | System of Record New Value |
 | ---                  | ---                            | ---                        |
-| :R:                  | :X:                            | :no change:                |
-| :R:                  | :P:                            | :X:                        |
-| :R:                  | :not set:                      | :P:                        |
-| :blank:              | :any:                          | :no change:                |
+| R                    | X                              | no change                  |
+| R                    | P                              | X                          |
+| R                    | not set                        | P                          |
+| blank                | any                            | no change                  |
+
+#### Batch Job #2 - Montly mailout job 
+
+
+![Fig. 5: Monthly mailout job overview](Mailout_Fig_5.png)
+
+
+![Fig. 6: Monthly mailout job overview](Mailout_Fig_6.png)
+
+
+![Fig. 7: Monthly mailout job overview](Mailout_Fig_7.png)
+
+
+#### CICS application to query the system of record
+
+If your bootcamp curriculum included CICS application development, then develop a BMS mapset and COBOL program to browse the system of record back end data store (either VSAM KSDS or DB2) and display the records. 
+
+![Fig. : CICS application](Mailout_Fig_8.png)
+
+It is not mandatory to write an update application for CICS, but feel free if you wish.
 
 
 
