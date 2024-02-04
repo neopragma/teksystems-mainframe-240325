@@ -68,6 +68,8 @@ Record layout:
 | 211-218 |	Last-Response | YYYYMMDD |
 | 219-219 |	Do-Not-Contact | "X" or "P" or space |
 
+Seed data for the KSDS: Mailout_Seed_Data.txt. Upload as ```<userid>.INNOV.MAILSEED```, DSORG=PS, RECFM=FB, LRECL=219, BLKSIZE=21900.
+
 _System of Record - DB2_
 
 Table Name: **CONTACTS** 
@@ -97,6 +99,8 @@ The first few steps of the job must read the three data feeds and sort them.
 
 _Data Feed #1_ 
 
+Upload ```capstone/Mailout_Data_Feed_1.txt``` as ```<userid>.INNOV.FEED1```.
+
 Data set type: PS (sequential)
 
 Record format: Fixed, blocked 
@@ -122,11 +126,13 @@ Record layout:
 
 _Data Feed #2_ 
 
+Upload ```capstone/Mailout_Data_Feed_2.txt``` as ```<userid>.INNOV.FEED2```.
+
 Data set type: PS (sequential)
 
 Record format: Fixed, blocked 
 
-Logical record length: 153 
+Logical record length: 154 
 
 Block size: Your choice
 
@@ -143,6 +149,8 @@ Record layout:
 | 153 - 154 | Language code - "EN", "ES", or an erroneous value. If blank assume "EN". |
 
 _Data Feed #3_
+
+Upload ```capstone/Mailout_Data_Feed_3.txt``` as ```<userid>.INNOV.FEED3```.
 
 Data set type: PS (sequential)
 
