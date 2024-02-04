@@ -87,7 +87,37 @@ Table Name: **CONTACTS**
 
 #### Batch Job #1 - Ingest Data Feeds 
 
-The first batch job will comprise several steps to read data feeds in different formats, reformat them into a common format, and sort them before updating the system of record with new and modified contact information. 
+The first batch job will comprise several steps to read data feeds in different formats, reformat them into a common format, normalize the names, sort the records and merge the files before updating the system of record with new and modified contact information. The number of job steps will depend on how you choose to design the solution. 
 
 ![Fig. 1: Ingest data feeds (overview)](Mailout_Fig_1.png)
+
+The first three steps of the job must read the three data feeds and sort them. 
+
+![Fig. 2: Read and sort 3 data feeds](Mailout_Fig_2.png)
+
+_Data Feed #1_ 
+
+Data set type: PS (sequential)
+
+Logical record length: 133 
+
+Record format: Fixed, blocked 
+
+Record layout:
+
+| Positions | Contents |
+| ---       | ---      |
+| 1 - 100   | Name - comma-delimited list of tokens. May contain:
+              first-name, last-name
+              first-name, middle-name, last-name
+              primer-nombre, segundo-nombre, primer-apellido, segundo-apellido 
+              if blank, it's an error 
+              if it contains fewer than 2 tokens or more than 4 tokens, it's an error |
+  | 101 - 132 | Email Address - could be invalid |
+  | 133 - 133 | Do Not Contact requested - any non-blank value | 
+
+  This format contains no language indicator. Normalization logic must guess based on the number of tokens in the Name field 
+
+
+
 
