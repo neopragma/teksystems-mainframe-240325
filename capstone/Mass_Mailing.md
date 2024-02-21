@@ -30,7 +30,7 @@ The project offers the opportunity to demonstrate the following skills:
 
 - Using ISPF panels to allocate data sets.
 - Using SDSF to review batch job output.
-- Writing JCL to run IBM utilities such as IEFBR14, EIBGENER, DFSORT, and IDCAMS.
+- Writing JCL to run IBM utilities such as IEFBR14, IEBGENER, DFSORT, and IDCAMS.
 - Writing DFSORT commands to reformat, sort, and merge data sets.
 - Working with Generation Data Groups (GDGs).
 - Conditional job step execution using either COND or IF/ELSE.
