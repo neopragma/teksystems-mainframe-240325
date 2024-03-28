@@ -102,8 +102,7 @@ Use SDSF to review the job output.
 
 Use ISPF Option 3.4 to check the attributes of the new data set to be sure they are what you expected based on your DD parameters.
 
-From now on, use your COBOL source library for COBOL source code.
-
+When you run compiles, this will be your target library for executables.
 
 
 ### JCL Lab 8 - Sort on two fields 
@@ -140,7 +139,7 @@ Catalog the output data set as ```<userid>.DATA.SRTOUT1```. Remember to pad the 
 
 ### JCL Lab 9 - Multi-step sort, catalogued procedures, and conditional execution  
 
-Refer to material in _JCL Module 8 - PROC_ for information on temporary data sets and stored procedures and _JCL Module 9 - COMD_ for information on conditional step execution.
+Refer to material in _JCL Module 8 - PROC_ for information on temporary data sets and stored procedures and _JCL Module 9 - COND_ for information on conditional step execution.
 
 Upload file ```labs/sort_input_2.txt``` from this repository. Name the z/OS data set ```<userid>.DATA.SRTIN2```. It has the same attributes as ```<userid>.DATA.SRTIN2```. 
 
