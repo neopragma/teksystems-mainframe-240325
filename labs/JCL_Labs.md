@@ -141,7 +141,7 @@ Catalog the output data set as ```<userid>.DATA.SRTOUT1```. Remember to pad the 
 
 Refer to material in _JCL Module 8 - PROC_ for information on temporary data sets and stored procedures and _JCL Module 9 - COND_ for information on conditional step execution.
 
-Upload file ```labs/sort_input_2.txt``` from this repository. Name the z/OS data set ```<userid>.DATA.SRTIN2```. It has the same attributes as ```<userid>.DATA.SRTIN2```. 
+Upload file ```labs/sort_input_2.txt``` from this repository. Name the z/OS data set ```<userid>.DATA.SRTIN2```. It has the same attributes as ```<userid>.DATA.SRTIN1```. 
 
 The SORT specifications are the same as in Lab 6. This time, write a job stream that sorts each of the two input data sets in separate steps. The SORTOUT datasets are to be temporary data sets.
 
