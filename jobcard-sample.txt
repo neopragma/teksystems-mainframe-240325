@@ -1,0 +1,4 @@
+//DBAD03A JOB 123,'SAMPLE',
+//            CLASS=A,MSGCLASS=A,MSGLEVEL=(1,1),
+//*           RESTART=stepname
+//            NOTIFY=&SYSUID
