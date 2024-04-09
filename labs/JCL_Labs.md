@@ -143,7 +143,7 @@ Refer to material in _JCL Module 8 - PROC_ for information on temporary data set
 
 Upload file ```labs/sort_input_2.txt``` from this repository. Name the z/OS data set ```<userid>.DATA.SRTIN2```. It has the same attributes as ```<userid>.DATA.SRTIN1```. 
 
-The SORT specifications are the same as in Lab 6. This time, write a job stream that sorts each of the two input data sets in separate steps. The SORTOUT datasets are to be temporary data sets.
+The SORT specifications are the same as in Lab 8. This time, write a job stream that sorts each of the two input data sets in separate steps. The SORTOUT datasets are to be temporary data sets.
 
 The two steps will be identical except for the names of the data sets. Extract that JCL into a procedure and catalog the procedure. The final job stream will invoke the procedure twice instead of duplicating the SORT JCL in both steps. If the first SORT fails, don't execute the second SORT. 
 
